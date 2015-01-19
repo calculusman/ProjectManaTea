@@ -1,2 +1,5 @@
 # ProjectManaTea
-Restoring Mana, a Cup at a Time.
+Restoring Mana . . . One Cup at a Time
+
+Authors:
+Andrew Kuo
