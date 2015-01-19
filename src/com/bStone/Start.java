@@ -150,8 +150,7 @@ public class Start
 	{
 		parString = "[" + Start.time() + "]" + "[" + Start.currentThread().getName() + "] " + parString;
 
-		System.out.println();
-		System.out.print(parString);
+		System.out.println(parString);
 	}
 
 	protected static void printWith(String parString)
@@ -229,7 +228,7 @@ public class Start
 			Start.reps++;
 			if (Start.reps == 1)
 			{
-				Start.printWith(" ");
+				Start.printWith(" Reps : ");
 			}
 			if (Start.reps % 10 == 0)
 			{
@@ -244,6 +243,11 @@ public class Start
 		}
 		else
 		{
+			if(Start.reps != 0)
+			{
+				Start.printWith("\n");
+			}
+			
 			Start.repOut = parString;
 			Start.reps = 0;
 		}
