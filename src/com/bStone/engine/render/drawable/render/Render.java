@@ -29,8 +29,12 @@ public abstract class Render extends RenderBase
 
 	public static void drawBoxFill(Box parBox)
 	{
-		gl().glTranslatef(parBox.getPosX(), parBox.getPosY(), 0F);
-		Render.drawBoxFill(parBox.getWidth(), parBox.getHeight());
+		gl().glPushMatrix();
+		{
+			gl().glTranslatef(parBox.getPosX(), parBox.getPosY(), 0F);
+			Render.drawBoxFill(parBox.getWidth(), parBox.getHeight());
+		}
+		gl().glPopMatrix();
 	}
 
 	public static void drawBoxFill(float parWidth, float parHeight)
@@ -49,10 +53,14 @@ public abstract class Render extends RenderBase
 
 	public static void drawBox(Box parBox)
 	{
-		gl().glTranslatef(parBox.getPosX(), parBox.getPosY(), 0F);
-		Render.drawBox(parBox.getWidth(), parBox.getHeight());
+		gl().glPushMatrix();
+		{
+			gl().glTranslatef(parBox.getPosX(), parBox.getPosY(), 0F);
+			Render.drawBox(parBox.getWidth(), parBox.getHeight());
+		}
+		gl().glPopMatrix();
 	}
-	
+
 	public static void drawBox(float parWidth, float parHeight)
 	{
 		gl().glBindTexture(GL2.GL_TEXTURE_2D, 0);

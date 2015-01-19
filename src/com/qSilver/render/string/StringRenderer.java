@@ -112,4 +112,9 @@ public class StringRenderer
 	{
 		return parString.length() * StringRenderer.font.getCharWidth() / 2;
 	}
+	
+	public static int getStringHeight(String parString)
+	{
+		return StringRenderer.font.getCharHeight() / 2;
+	}
 }

@@ -1,11 +1,9 @@
 package com.qSilver.render.gui;
 
 import com.bStone.engine.render.drawable.Drawable;
-import com.bStone.engine.render.drawable.render.Render;
-import com.bStone.util.ColorUtil;
 import com.bStone.util.math.Box;
 
-public class Gui extends Drawable
+public abstract class Gui extends Drawable
 {
 	protected float posX;
 	protected float posY;
@@ -34,13 +32,7 @@ public class Gui extends Drawable
 	}
 
 	@Override
-	public void onUpdate()
-	{
-		float i = this.toBox().intersects(this.getScreenObj().getViewPort().getMousePos()) ? 400F : 255F;
-		Render.gl().glColor3f(ColorUtil.getRed(this.color) / i, ColorUtil.getGreen(this.color) / i, ColorUtil.getBlue(this.color) / i);
-
-		Render.drawBoxFill(this.box);
-	}
+	public abstract void onUpdate();
 
 	public void onClick(int parButton) {}
 
