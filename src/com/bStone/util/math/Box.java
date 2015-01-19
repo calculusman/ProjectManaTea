@@ -32,14 +32,14 @@ public class Box extends VertexShape
 
 	public Box expand(float parWidthOffset, float parHeightOffset)
 	{
-		return new Box(this.getPosX(), this.getPosY(), this.getWidth() + parWidthOffset, this.getHeight() + parHeightOffset);
+		return new Box(this.getPosX() - parWidthOffset / 2, this.getPosY() - parHeightOffset / 2, this.getWidth() + parWidthOffset, this.getHeight() + parHeightOffset);
 	}
 
 	public Box offset(float parOffsetX, float parOffsetY)
 	{
 		return new Box(this.getPosX() + parOffsetX, this.getPosY() + parOffsetY, this.getWidth(), this.getHeight());
 	}
-	
+
 	public boolean withinBounds(Box parBox)
 	{
 		//TODO: Optimize this! And add a line version

@@ -39,7 +39,7 @@ public class BoundingBox extends Box
 
 	public BoundingBox expand(float parWidthOffset, float parHeightOffset)
 	{
-		return new BoundingBox(this.parent, this.getPosX(), this.getPosY(), this.getWidth() + parWidthOffset, this.getHeight() + parHeightOffset);
+		return new BoundingBox(this.parent, this.getPosX() - parWidthOffset / 2, this.getPosY() - parHeightOffset / 2, this.getWidth() + parWidthOffset, this.getHeight() + parHeightOffset);
 	}
 
 	public BoundingBox offset(float parOffsetX, float parOffsetY)
