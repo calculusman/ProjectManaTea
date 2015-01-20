@@ -10,6 +10,7 @@ public abstract class Gui extends Drawable
 	private float prevPosX;
 	private float prevPosY;
 
+	protected float scale;
 	protected int color;
 
 	private Box box;
@@ -20,9 +21,16 @@ public abstract class Gui extends Drawable
 		this.prevPosX = this.posX = parPosX;
 		this.prevPosY = this.posY = parPosY;
 
+		this.scale = 1F;
 		this.color = this.hashCode();
 
 		this.box = new Box(parPosX, parPosY, parWidth, parHeight);
+	}
+
+	public Gui setScale(float parScale)
+	{
+		this.scale = parScale;
+		return this;
 	}
 
 	public Gui setColor(int parColor)
@@ -34,7 +42,7 @@ public abstract class Gui extends Drawable
 	@Override
 	public abstract void onUpdate();
 
-	public void onClick(int parButton) {}
+	public abstract void onClick(int parButton);
 
 	@Override
 	public void onPositionUpdate()
@@ -92,6 +100,11 @@ public abstract class Gui extends Drawable
 	public float getHeight()
 	{
 		return this.box.getHeight();
+	}
+
+	public float getScale()
+	{
+		return this.scale;
 	}
 
 	public int getColor()

@@ -1,6 +1,6 @@
-package com.bStone.engine.resource.registry;
+package com.bStone.engine.resource.texture;
 
-import com.bStone.engine.resource.texture.TextureBase;
+import com.bStone.engine.resource.registry.RegistryMap;
 
 public class TextureRegistry extends RegistryMap<String, TextureBase>
 {

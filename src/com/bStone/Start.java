@@ -78,7 +78,6 @@ public class Start
 	/**Stop the applications and game engine*/
 	public static void stop()
 	{
-		System.out.println();
 		Start.printTitle("Credit", "Familia y Amigos");
 		
 		for(String id : Start.application.keySet())
@@ -311,7 +310,7 @@ public class Start
 		System.out.println(parHead);
 		System.out.println(parBody);
 		System.out.println("------------------------");
-		System.out.println("\n////////////////////////");
+		System.out.println("\n////////////////////////\n");
 	}
 
 	public static String time()

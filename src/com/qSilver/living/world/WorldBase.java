@@ -4,7 +4,7 @@ import com.bStone.Start;
 import com.bStone.engine.render.drawable.render.Render;
 import com.bStone.engine.render.drawable.view.IViewable;
 import com.bStone.engine.render.drawable.view.ViewPort;
-import com.bStone.engine.resource.registry.RenderRegistry;
+import com.bStone.engine.resource.render.RenderRegistry;
 import com.bStone.util.Counter;
 import com.qSilver.living.ILivingManager;
 import com.qSilver.living.Living;

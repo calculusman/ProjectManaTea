@@ -1,6 +1,7 @@
-package com.bStone.engine.resource.registry;
+package com.bStone.engine.resource.render;
 
 import com.bStone.engine.render.drawable.render.Render;
+import com.bStone.engine.resource.registry.RegistryMap;
 import com.qSilver.living.Living;
 
 public class RenderRegistry extends RegistryMap<Class<? extends Living>, Render>

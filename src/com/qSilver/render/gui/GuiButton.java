@@ -5,7 +5,7 @@ import com.bStone.util.CardinalDirection;
 import com.bStone.util.ColorUtil;
 import com.qSilver.render.string.StringRenderer;
 
-public class GuiButton extends Gui
+public abstract class GuiButton extends Gui
 {
 	private String label;
 
@@ -25,6 +25,8 @@ public class GuiButton extends Gui
 	{
 		Render.gl().glPushMatrix();
 		{
+			Render.gl().glScalef(this.scale, this.scale, 1F);
+
 			float r = ColorUtil.getRed(this.color) / 255F;
 			float g = ColorUtil.getGreen(this.color) / 255F;
 			float b = ColorUtil.getBlue(this.color) / 255F;
@@ -44,6 +46,9 @@ public class GuiButton extends Gui
 		}
 		Render.gl().glPopMatrix();
 	}
+
+	@Override
+	public abstract void onClick(int parButton);
 
 	public String getLabel()
 	{

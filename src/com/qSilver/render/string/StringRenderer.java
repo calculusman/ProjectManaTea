@@ -4,7 +4,7 @@ import javax.media.opengl.GL2;
 
 import com.bStone.engine.render.drawable.render.Render;
 import com.bStone.engine.resource.Resource;
-import com.bStone.engine.resource.registry.TextureRegistry;
+import com.bStone.engine.resource.texture.TextureRegistry;
 import com.qSilver.opengl.TextureGL;
 
 public class StringRenderer

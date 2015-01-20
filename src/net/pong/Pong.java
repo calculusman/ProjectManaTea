@@ -1,8 +1,9 @@
 package net.pong;
 
 import com.bStone.Start;
-import com.bStone.engine.resource.registry.RenderRegistry;
-import com.bStone.engine.resource.registry.TextureRegistry;
+import com.bStone.engine.resource.render.RenderRegistry;
+import com.bStone.engine.resource.texture.TextureRegistry;
+import com.bStone.engine.resource.timer.TimerRegistry;
 import com.qSilver.living.world.WorldManager;
 import com.qSilver.opengl.ApplicationGL;
 
@@ -30,6 +31,7 @@ public class Pong extends ApplicationGL
 		super.onLoad();
 		this.getResourceEngine().add(RenderRegistry.INSTANCE);
 		this.getResourceEngine().add(TextureRegistry.INSTANCE);
+		this.getResourceEngine().add(TimerRegistry.INSTANCE);
 	}
 
 	@Override
@@ -37,7 +39,7 @@ public class Pong extends ApplicationGL
 	{
 		super.onUnload();
 	}
-	
+
 	@Override
 	public void onReload()
 	{
@@ -47,7 +49,7 @@ public class Pong extends ApplicationGL
 	@Override
 	public void onFirstTick()
 	{
-		this.worldManager.setNextWorld(new GameWorld());
+		this.worldManager.setNextWorld(new MenuWorld());
 		this.worldManager.initiate();
 	}
 

@@ -73,11 +73,11 @@ public class ResourceEngine extends Engine implements IRenderable
 		if (this.requireResourceReload())
 		{
 			this.reload();
-			
+
 			this.setRequireResourceReload(false);
 			return;
 		}
-		
+
 		for(ILoadable loadable : this.clients)
 		{
 			loadable.onContext();
